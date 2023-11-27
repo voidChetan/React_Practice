@@ -1,23 +1,28 @@
 import logo from './logo.svg';
-import './App.css';
-
+import './App.css'; 
+import Variables from './components/Variables';
+import Functions from './components/Functions';
+import ObjectUpdate from './components/ObjectUpdate';
+import ArrayUpdate from './components/ArrayUpdate';
+import HidenShow from './components/HidenShow';
+import Style from './components/Style';
+import Forms from './components/Forms';
+import ForLoop from './components/ForLoop';
+ 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h4>This Is Parent Page</h4>
+      <div>
+        {/* <Variables/> */}
+        {/* <Functions/> */}
+        {/* <ObjectUpdate/> */}
+        {/* <ArrayUpdate/>  */}
+        {/* <HidenShow/> */}
+        {/* <Style/> */}
+        {/* <Forms/> */}
+        <ForLoop/>
+      </div>
     </div>
   );
 }
