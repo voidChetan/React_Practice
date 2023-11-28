@@ -8,6 +8,7 @@ import HidenShow from './components/HidenShow';
 import Style from './components/Style';
 import Forms from './components/Forms';
 import ForLoop from './components/ForLoop';
+import MapOperator from './components/MapOperator';
  
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         {/* <HidenShow/> */}
         {/* <Style/> */}
         {/* <Forms/> */}
-        <ForLoop/>
+        {/* <ForLoop/> */}
+        <MapOperator/>
       </div>
     </div>
   );
