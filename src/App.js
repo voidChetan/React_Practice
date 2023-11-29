@@ -9,6 +9,8 @@ import Style from './components/Style';
 import Forms from './components/Forms';
 import ForLoop from './components/ForLoop';
 import MapOperator from './components/MapOperator';
+import DyanamicStyleClass from './components/DyanamicStyleClass';
+import GrossaryListApp from './components/task/GrossaryListApp';
  
 function App() {
   return (
@@ -23,7 +25,9 @@ function App() {
         {/* <Style/> */}
         {/* <Forms/> */}
         {/* <ForLoop/> */}
-        <MapOperator/>
+        {/* <MapOperator/> */}
+        {/* <DyanamicStyleClass/> */}
+        <GrossaryListApp/>
       </div>
     </div>
   );
