@@ -80,7 +80,7 @@ const MapOperator = () => {
                                     <td>{studentObj.gender}</td>
                                     <td>{studentObj.city}</td>
                                     <td>{ studentObj.isActive ? 'Active' : 'De-Active' }</td>
-                                </tr>
+                                </tr> 
                            
                             } )
                         }

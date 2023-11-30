@@ -21,7 +21,7 @@ const DyanamicStyleClass = () => {
             <div className='row'>
                 <div className='col-3'>
                     <div className='p-3' 
-                    style={ { backgroundColor : backColor  } } >
+                    style={ { backgroundColor : backColor ,color:'red' } } >
                             <input type='text'
                              onChange={(event) => {changeBackCOlor(event)}} placeholder='Enter Color'/>
                     </div>

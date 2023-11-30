@@ -11,6 +11,7 @@ import ForLoop from './components/ForLoop';
 import MapOperator from './components/MapOperator';
 import DyanamicStyleClass from './components/DyanamicStyleClass';
 import GrossaryListApp from './components/task/GrossaryListApp';
+import FromValidation from './components/FromValidation';
  
 function App() {
   return (
@@ -27,7 +28,8 @@ function App() {
         {/* <ForLoop/> */}
         {/* <MapOperator/> */}
         {/* <DyanamicStyleClass/> */}
-        <GrossaryListApp/>
+        {/* <GrossaryListApp/> */}
+        <FromValidation/>
       </div>
     </div>
   );

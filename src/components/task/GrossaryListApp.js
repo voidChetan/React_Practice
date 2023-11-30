@@ -10,15 +10,23 @@ const GrossaryListApp = () => {
         { itemName: 'Turmeric', price: 200 },
         { itemName: 'Dry Fruits Mix', price: 500 }
     ];
+    console.log('innitial')
     let [selectItem, setSelectedItem] = useState({ itemName: '', price: '', quantity: '' });
-    let [cartItems, setCartItmes] =  useState([])
-
+    
+    let [cartItems, setCartItmes] =  useState([]) 
+    
     const changeSelectedItem = (event, key) => {   
+        console.log('changeSelectedItem')
         setSelectedItem(prevObj => ({ ...prevObj, [key]: event.target.value })) 
     }
 
     const changeCartItems = () => { 
-        setCartItmes(prevArray =>  [...prevArray, selectItem])
+        console.log('changeCartItems')
+        const item =  itemList.find(m=> m.itemName == selectItem.itemName);
+
+        const selectedItemObj = {...selectItem,price: item.price};  
+
+        setCartItmes(prevArray =>  [...prevArray, selectedItemObj])
     }
     return (
         <div className='row'> 
@@ -80,7 +88,7 @@ const GrossaryListApp = () => {
                 </div>
             </div>
             <div className='col-3'>
-            {selectItem.itemName} - {selectItem.quantity}
+              {selectItem.itemName} - {selectItem.price}
             </div>
 
         </div>

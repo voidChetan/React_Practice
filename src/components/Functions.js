@@ -19,7 +19,7 @@ const Functions = () => {
         alert(message)
         console.log(employeeName)
     } 
-    const getSum = (num1, num2) => num1 + num2;
+    const getSum = (num1, num2) => <div> {num1 + num2 } </div> ;
 
     const getSummOfNUmbers = () => {
         return 123;
@@ -30,7 +30,7 @@ const Functions = () => {
             <p>Product name: {productName} : EMp Name: {employeeName}</p> 
             <button onClick={changeProductName}>Change Produc Name</button>
             <button onClick={chnageEMpName}>Change Employee Name</button>
-
+             <h1>{getSum()}</h1>
             <button onClick={printName}>Print Name</button>
 
             <button onClick = { () => { showMessage("Hii From Btn") } }>CLick Me</button>
