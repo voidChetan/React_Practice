@@ -12,6 +12,7 @@ import MapOperator from './components/MapOperator';
 import DyanamicStyleClass from './components/DyanamicStyleClass';
 import GrossaryListApp from './components/task/GrossaryListApp';
 import FromValidation from './components/FromValidation';
+import HotelOrder from './components/task/HotelOrder';
  
 function App() {
   return (
@@ -29,7 +30,8 @@ function App() {
         {/* <MapOperator/> */}
         {/* <DyanamicStyleClass/> */}
         {/* <GrossaryListApp/> */}
-        <FromValidation/>
+        {/* <FromValidation/> */}
+        <HotelOrder/>
       </div>
     </div>
   );
