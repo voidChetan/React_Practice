@@ -4,7 +4,8 @@ import axios from 'axios';
 const GetApiCall = () => {
 
     let [usersData, setUsersData] = useState([]);
-    let [photos, setPhotos] = useState([])
+    let [photos, setPhotos] = useState([]);
+    let [data, setData] = useState([]);
 
     const getAllUsers = async () => {
         debugger;
@@ -15,12 +16,13 @@ const GetApiCall = () => {
 
     const getAllPhots = async () => {
         const result = await axios.get('https://jsonplaceholder.typicode.com/photos');
+        console.log('res1',result.data)
         setPhotos(result.data);
     }
 
     return (
         <div>
-            <button className='btn btn-primary' onClick={getAllUsers}>Get USers</button>
+            <button className='btn btn-primary' onClick={getAllUsers}>Get USers</button> 
             <button className='btn btn-primary' onClick={getAllPhots}>Get Phots </button>
             <div className='row'>
                 <div className='col-6'>

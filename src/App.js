@@ -16,6 +16,9 @@ import HotelOrder from './components/task/HotelOrder';
 
 import { Routes, Route, BrowserRouter, Link } from 'react-router-dom';
 import GetApiCall from './components/GetApiCall';
+import GetApi2 from './components/GetApi2';
+import PostApi from './components/PostApi';
+import Employee from './components/Employee';
 
 function App() {
   return (
@@ -42,23 +45,27 @@ function App() {
               <li className="nav-item">
                <Link className='nav-link' to="/getAPI">Get-API</Link>
               </li>
+              <li className="nav-item">
+               <Link className='nav-link' to="/getAPI2">Get-API-2</Link>
+              </li>
+              <li className="nav-item">
+               <Link className='nav-link' to="/postAPI">Post-API</Link>
+              </li>
+              <li className="nav-item">
+               <Link className='nav-link' to="/employee">Employee</Link>
+              </li>
             </ul>
           </div>
         </nav>
         <Routes>
-          <Route path='/' element={<FromValidation></FromValidation>}>
-
-          </Route>
-          <Route path='/hotelApp' element={<HotelOrder></HotelOrder>}>
-
-          </Route>
-          <Route path='/gorceryapp' element={<GrossaryListApp>
-
-          </GrossaryListApp>}></Route>
+          <Route path='/' element={<FromValidation></FromValidation>}> </Route>
+          <Route path='/hotelApp' element={<HotelOrder></HotelOrder>}> </Route>
+          <Route path='/gorceryapp' element={<GrossaryListApp> </GrossaryListApp>}></Route>
           <Route path='/getAPI' element={<GetApiCall></GetApiCall>}></Route>
-          <Route path='/functions' element={<Functions></Functions>}>
-
-          </Route>
+          <Route path='/getAPI2' element={<GetApi2></GetApi2>}></Route>
+          <Route path='/employee' element={<Employee></Employee>}></Route>
+          <Route path='/postAPI' element={<PostApi></PostApi>}></Route>
+          <Route path='/functions' element={<Functions></Functions>}> </Route>
           <Route path='/Object-Update' element={<ObjectUpdate>
             
           </ObjectUpdate>}></Route>
