@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import ProgressBar from './reusable/ProgressBar';
+import MyLi from './reusable/MyLi';
 
 const GetApiCall = () => {
 
@@ -19,9 +21,12 @@ const GetApiCall = () => {
         console.log('res1',result.data)
         setPhotos(result.data);
     }
+    const cityList  = ['Pune','Nagpur','Mumbai','Solapur']
 
     return (
         <div>
+            <ProgressBar  progessValue={'50%'} progressClassName='bg-success'/>
+            <MyLi data={cityList}></MyLi>
             <button className='btn btn-primary' onClick={getAllUsers}>Get USers</button> 
             <button className='btn btn-primary' onClick={getAllPhots}>Get Phots </button>
             <div className='row'>

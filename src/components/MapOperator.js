@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ProgressBar from './reusable/ProgressBar';
 
 const MapOperator = () => {
     const [cityList,setCityList] = useState(['Pune', 'Nagpur', 'Jabalpur', 'Solapur' ,'Thane']);
@@ -10,10 +11,10 @@ const MapOperator = () => {
         setCityList(prevList => [...prevList,cityName])
     }
     const stuentList = [
-        {studentId: 112, name: 'Punam', gender:'female',city:'pune',isActive: false},
-        {studentId: 113, name: 'Rahul', gender:'Male',city:'Nagpur',isActive: true},
-        {studentId: 114, name: 'Ankit', gender:'Male',city:'Mumbai',isActive: false},
-        {studentId: 115, name: 'Akansha', gender:'female',city:'pune',isActive: false}
+        {studentId: 112, presntPercent:'40%', name: 'Punam', gender:'female',city:'pune',isActive: false},
+        {studentId: 113, presntPercent:'60%', name: 'Rahul', gender:'Male',city:'Nagpur',isActive: true},
+        {studentId: 114, presntPercent:'20%', name: 'Ankit', gender:'Male',city:'Mumbai',isActive: false},
+        {studentId: 115, presntPercent:'90%', name: 'Akansha', gender:'female',city:'pune',isActive: false}
     ]
     return (
         <div >
@@ -60,7 +61,7 @@ const MapOperator = () => {
                       } )  
                     }
                 </div>
-                <div className='col-4'>
+                <div className='col-8'>
                     <table className='table table-bordered'>
                         <thead>
                             <tr>
@@ -69,6 +70,7 @@ const MapOperator = () => {
                                 <th>Gender</th>
                                 <th>City</th>
                                 <th>Status</th>
+                                <th>Percent</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -80,6 +82,9 @@ const MapOperator = () => {
                                     <td>{studentObj.gender}</td>
                                     <td>{studentObj.city}</td>
                                     <td>{ studentObj.isActive ? 'Active' : 'De-Active' }</td>
+                                    <td> 
+                                        <ProgressBar progressClassName='bg-warning' progessValue={studentObj.presntPercent}/>
+                                    </td>
                                 </tr> 
                            
                             } )

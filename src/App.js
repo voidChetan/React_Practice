@@ -54,6 +54,9 @@ function App() {
               <li className="nav-item">
                <Link className='nav-link' to="/employee">Employee</Link>
               </li>
+              <li className="nav-item">
+               <Link className='nav-link' to="/MapOperator">MapOperator</Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -65,6 +68,7 @@ function App() {
           <Route path='/getAPI2' element={<GetApi2></GetApi2>}></Route>
           <Route path='/employee' element={<Employee></Employee>}></Route>
           <Route path='/postAPI' element={<PostApi></PostApi>}></Route>
+          <Route path='/MapOperator' element={<MapOperator></MapOperator>}></Route>
           <Route path='/functions' element={<Functions></Functions>}> </Route>
           <Route path='/Object-Update' element={<ObjectUpdate>
             

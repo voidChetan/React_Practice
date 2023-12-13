@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import ProgressBar from './reusable/ProgressBar';
+import MyLi from './reusable/MyLi';
 
 const GetApi2 = () => {
     let [products, setproducts] = useState([]);
@@ -47,14 +49,16 @@ const GetApi2 = () => {
             alert(result.data.message)
         }
     }
+    let stateList = ['Maharashtra','punjab','Goa']
 
     return (
         <div >
             <div className='row'>
- 
+                <MyLi data={stateList}></MyLi>
                 <div className='col-12 text-end'>
                     <button className='btn btn-primary' data-bs-toggle="modal" data-bs-target="#myModal" >Add New Prodduct</button>
                 </div>
+               <ProgressBar progessValue={'10%'} progressClassName='bg-danger'/>
             </div>
             <div className="modal" id="myModal">
                 <div className="modal-dialog">
