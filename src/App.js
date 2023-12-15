@@ -19,6 +19,7 @@ import GetApiCall from './components/GetApiCall';
 import GetApi2 from './components/GetApi2';
 import PostApi from './components/PostApi';
 import Employee from './components/Employee';
+import Attendance from './components/Attendance';
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
               <li className="nav-item">
                <Link className='nav-link' to="/MapOperator">MapOperator</Link>
               </li>
+              <li className="nav-item">
+               <Link className='nav-link' to="/attendance">Attendance</Link>
+              </li>
             </ul>
           </div>
         </nav>
@@ -70,6 +74,7 @@ function App() {
           <Route path='/postAPI' element={<PostApi></PostApi>}></Route>
           <Route path='/MapOperator' element={<MapOperator></MapOperator>}></Route>
           <Route path='/functions' element={<Functions></Functions>}> </Route>
+          <Route path='/attendance' element={<Attendance></Attendance>}> </Route>
           <Route path='/Object-Update' element={<ObjectUpdate>
             
           </ObjectUpdate>}></Route>
