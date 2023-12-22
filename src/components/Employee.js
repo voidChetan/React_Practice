@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import { Appcontext } from "../App";
 
 const Employee = () => {
 
+    let contextData = useContext(Appcontext);
+
+    
     let [employeeList, setEmployeeList] = useState([]);
     let [employeeobj, setEmployeeObj] = useState({"empId": 0,
     "empName": "",
@@ -23,8 +27,7 @@ const Employee = () => {
     const changeFormValue = (event, key) => {
         debugger;
         setEmployeeObj(prevObj => ({...prevObj, [key]:event.target.value}))
-    }
-
+    } 
     const getAllEmployee = async () => {
         const result = await axios.get("https://onlinetestapi.gerasim.in/api/TeamSync/GetAllEmployee");
         setEmployeeList(result.data.data);
@@ -48,8 +51,7 @@ const Employee = () => {
         } else {
             alert(result.data.message)
         }
-    }
-
+    } 
     const updateEmployee = async () =>{
         const result = await axios.post("https://onlinetestapi.gerasim.in/api/TeamSync/UpdateEmployee", employeeobj);
         debugger;
@@ -59,8 +61,7 @@ const Employee = () => {
         } else {
             alert(result.data.message)
         }
-    }
-
+    } 
     const deleteEmployee = async (id) =>{
         const result = await axios.get("https://onlinetestapi.gerasim.in/api/TeamSync/DeleteEmployeeByEmpId?empid="+id);
         debugger;
@@ -70,9 +71,7 @@ const Employee = () => {
         } else {
             alert(result.data.message)
         }
-    }
-    
-
+    } 
     return (
         <div>
             <div className='row'>
@@ -81,7 +80,7 @@ const Employee = () => {
                         <div className='card-header bg-success'>
                             <div className='row'>
                                 <div className='col-6'>
-                                    Employee List
+                                    Employee List - {JSON.stringify(contextData)}
                                 </div>
                                 <div className='col-6 text-end'>
                                     <button className='btn btn-sm btn-primary ' onClick={getAllEmployee}>Load Employee</button>

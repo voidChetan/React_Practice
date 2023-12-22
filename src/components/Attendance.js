@@ -17,7 +17,7 @@ const Attendance = () => {
     useEffect(()=>{
         getAllAttendance();
         getEmployee();
-    } , [])
+    },[])
 
     const changeFormValue = (event, key) => {
         setAttendanceObj(prevObj => ({...prevObj, [key]:event.target.value}))

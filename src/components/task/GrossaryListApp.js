@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
+import { Appcontext } from "../../App";
 
 const GrossaryListApp = () => {
+
+    const context =  useContext(Appcontext)
     const itemList = [
         { itemName: 'Oil', price: 250 },
         { itemName: 'Dal', price: 150 },
@@ -36,7 +39,7 @@ const GrossaryListApp = () => {
                         <div className="row">
                             <div className="col-5 col-md-5 col-sm-5 col-lg-5">
                                 <select id="dpdlItem" className="form-control" onChange={(event) => { changeSelectedItem(event, 'itemName') }}>
-                                    <option value=""> Select Item </option>
+                                    <option value=""> Select Item -{context.appName} </option>
                                     {
                                         itemList.map((item) => {
                                             return <option value={item.itemName}> {item.itemName} - {item.price}</option>

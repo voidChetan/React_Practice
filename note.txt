@@ -1,0 +1,30 @@
+In app.js
+import { createContext } from "react";
+
+above function create useContext
+
+const Appcontext = createContext();
+
+then at the end export it 
+
+export {Appcontext};
+in app function create a varible to hold data 
+let myContext = {
+    appName: 'React b-21',
+    duration: '4 Months'
+  };
+
+  wrap all html code inside 
+  <Appcontext.Provider value={myContext}> 
+
+<Appcontext.Provider >
+  *********************
+where ever you want to use contexct data 
+
+import React, { useState, useContext } from 'react';
+import created context name from appjs
+import { Appcontext } from "../App";
+
+create local variable and acces  context data 
+
+let contextData = useContext(Appcontext);
