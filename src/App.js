@@ -25,6 +25,7 @@ import { createContext } from "react";
 import DepedentDropdown from './components/logical/DepedentDropdown';
 import UseEffect from './components/hooks/UseEffect';
 import SingleWithMultple from './components/logical/SingleWithMultple';
+import TestClassComp from './components/classComponent/TestClassComp';
 
 const Appcontext = createContext();
 
@@ -83,6 +84,9 @@ function App() {
                 <li className="nav-item">
                   <Link className='nav-link' to="/singlewithmultple">single-multple</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className='nav-link' to="/TestClassComp">TestClassComp</Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -99,6 +103,7 @@ function App() {
             <Route path='/functions' element={<Functions></Functions>}> </Route>
             <Route path='/attendance' element={<Attendance></Attendance>}> </Route>
             <Route path='/UseEffect' element={<UseEffect></UseEffect>}> </Route>
+            <Route path='/TestClassComp' element={<TestClassComp></TestClassComp>}> </Route>
             <Route path='/singlewithmultple' element={<SingleWithMultple></SingleWithMultple>}> </Route>
             <Route path='/Object-Update' element={<ObjectUpdate>
               

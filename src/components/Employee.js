@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Appcontext } from "../App";
 
 const Employee = () => {
-
     let contextData = useContext(Appcontext);
 
     
